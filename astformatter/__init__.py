@@ -434,7 +434,7 @@ class ASTFormatter(ast.NodeVisitor):
         return "-"
 
     def visit_UnaryOp(self, node):
-        return "%s %s" % (self.visit(node.op), self.visit(node.operand))
+        return "%s %s" % (self.visit(node.op), self.__parens(node.operand, node.op))
 
     def visit_withitem(self, node):
         if getattr(node, 'optional_vars', None) is None:
