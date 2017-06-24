@@ -1,0 +1,7 @@
+[project]
+name=ASTFormatter
+version=0.6.2
+docfile=astformatter/__init__.py
+
+[github]
+repo=python-astformatter
