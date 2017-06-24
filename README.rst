@@ -28,8 +28,16 @@ Bugs
 Latest Changes
 --------------
 
-version 0.6.2
-  Add missing newlines for two uses of ``raise``
+`0.6.3 <'https://pypi.python.org/pypi?:action=display&name=ASTFormatter&version=0.6.3'>`_ (2017-06-24)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Process docstring if exsts in Module, ClassDef, and FunctionDef
+   nodes.
+   `#9 <https://github.com/darkfoxprime/python-astformatter/pull/9>`_
+   (`darkfoxprime <https://github.com/darkfoxprime>`_)
+-  Add parens around unary operands if necessary
+   `#8 <https://github.com/darkfoxprime/python-astformatter/pull/8>`_
+   (`zerebubuth <https://github.com/zerebubuth>`_)
 
 Copyright
 ---------
