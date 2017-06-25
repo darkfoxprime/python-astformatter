@@ -42,7 +42,7 @@ class ASTFormatter(ast.NodeVisitor):
     Latest Changes
     --------------
     
-    `0.6.3 <'https://pypi.python.org/pypi?:action=display&name=ASTFormatter&version=0.6.3'>`_ (2017-06-24)
+    `0.6.4 <'https://pypi.python.org/pypi?:action=display&name=ASTFormatter&version=0.6.4'>`_ (2017-06-25)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     -  Process docstring if exsts in Module, ClassDef, and FunctionDef
@@ -62,7 +62,7 @@ class ASTFormatter(ast.NodeVisitor):
     .. |copy| unicode:: 0xA9 .. copyright sign
     '''
 
-    __version__ = '0.6.3'
+    __version__ = '0.6.4'
 
     def __init__(self):
         """Return a new ASTFormatter object."""

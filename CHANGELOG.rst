@@ -1,11 +1,11 @@
 Change Log
 ==========
 
-`0.6.3 <'https://pypi.python.org/pypi?:action=display&name=ASTFormatter&version=0.6.3'>`_ (2017-06-24)
+`0.6.4 <'https://pypi.python.org/pypi?:action=display&name=ASTFormatter&version=0.6.4'>`_ (2017-06-25)
 ------------------------------------------------------------------------------------------------------
 
 `Full
-Changelog <https://github.com/darkfoxprime/python-astformatter/compare/v0.6.2...0.6.3>`_
+Changelog <https://github.com/darkfoxprime/python-astformatter/compare/v0.6.2...0.6.4>`_
 
 **Fixed bugs:**
 
