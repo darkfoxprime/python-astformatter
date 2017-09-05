@@ -156,8 +156,8 @@ class ASTFormatter(ast.NodeVisitor):
     # have higher precedence values thatn ast.Add and ast.Sub.
     _precedence = {}
     for __precedence_value in range(len(__precedence_list)):
-      for __token in __precedence_list[__precedence_value]:
-        _precedence[__token] = __precedence_value
+        for __token in __precedence_list[__precedence_value]:
+            _precedence[__token] = __precedence_value
 
     # the __parens method accepts an operand and the operator which is
     # operating on the operand.  if the operand's type has a lower
@@ -196,7 +196,7 @@ class ASTFormatter(ast.NodeVisitor):
 
     def visit_arg(self, node):
         if getattr(node, 'annotation', None):
-          return "%s: %s" % (node.arg, self.visit(node.annotation))
+            return "%s: %s" % (node.arg, self.visit(node.annotation))
         return node.arg
 
     def visit_arguments(self, node):
@@ -266,7 +266,7 @@ class ASTFormatter(ast.NodeVisitor):
 
     def visit_DictComp(self, node):
         if getattr(node, 'generators', None):
-            return "{%s:%s %s}" % (self.visit(node.key), self.visit(node.value)," ".join(self.visit(generator) for generator in node.generators),)
+            return "{%s:%s %s}" % (self.visit(node.key), self.visit(node.value), " ".join(self.visit(generator) for generator in node.generators),)
         return "{%s:%s}" % (self.visit(node.key), self.visit(node.value))
 
     def visit_Div(self, node):
@@ -646,7 +646,7 @@ class ASTFormatter(ast.NodeVisitor):
             retval.extend(["else:\n"] + self.__process_body(orelse, "    "))
         final = getattr(node, 'finalbody', None)
         if final is not None:
-            retval.extend( ["finally:\n"] + self.__process_body(node.finalbody, "    ") )
+            retval.extend(["finally:\n"] + self.__process_body(node.finalbody, "    "))
         return retval
 
     visit_TryExcept = visit_Try
@@ -664,7 +664,7 @@ class ASTFormatter(ast.NodeVisitor):
         ] + self.__process_body(node.body, "    ") + orelse
 
     def visit_With(self, node):
-        if getattr(node, 'items',None) is not None:
+        if getattr(node, 'items', None) is not None:
             asvars = ", ".join([self.visit(item) for item in node.items])
         else:
             if getattr(node, 'optional_vars', None) is None:
@@ -686,4 +686,4 @@ if __name__ == '__main__':
     fmt = ASTFormatter()
     import inspect
     my_module = inspect.getfile(inspect.currentframe())
-    sys.out.write(fmt.format(ast.parse(open(my_module, 'rU').read(), my_module, mode='exec')))
+    sys.stdout.write(fmt.format(ast.parse(open(my_module, 'rU').read(), my_module, mode='exec')))

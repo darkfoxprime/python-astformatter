@@ -4,7 +4,6 @@
 from setuptools import setup
 
 from codecs import open
-from os import path
 
 from astformatter import ASTFormatter
 
